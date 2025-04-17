@@ -1,0 +1,13 @@
+vector<int> reverseArray(vector<int> a) {
+    
+    stack<int>st;
+    vector<int>ans;
+    for(auto it: a){
+      st.push(it);
+    }
+    for(int i=0;i<a.size();i++){
+      ans.push_back(st.top());
+      st.pop();
+    }
+    return ans;
+}
